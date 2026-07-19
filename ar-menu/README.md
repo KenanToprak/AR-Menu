@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AR Restoran Menü Sistemi
 
-## Getting Started
+Bu proje, restoran müşterilerinin menüdeki ürünlerin karekodlarını (QR kod) okutarak, ürünleri kendi masalarında artırılmış gerçeklik (AR) teknolojisiyle, gerçek boyutlarında görmelerini sağlayan yenilikçi bir web uygulamasıdır.
 
-First, run the development server:
+## 🚀 Özellikler
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Uygulamasız AR Deneyimi:** Google `<model-viewer>` altyapısı sayesinde müşteriler herhangi bir uygulama indirmeden doğrudan telefonlarının kamerasından AR deneyimini (iOS'ta Quick Look, Android'de Scene Viewer) yaşarlar.
+- **Yönetim Paneli (`/admin`):** Restoran yetkilileri bu panel üzerinden menü öğelerini görüntüleyebilir ve masalar için otomatik oluşturulmuş QR kodların çıktılarını alabilir.
+- **Göz Yormayan Tasarım:** Restoran ambiyansına uygun, iştah açıcı ancak kullanıcıyı yormayan sıcak (krem, yumuşak kahve) tonlar tercih edilmiştir.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Kullanılan Teknolojiler
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend:** Next.js (React), Tailwind CSS
+- **AR Teknolojisi:** `@google/model-viewer`
+- **Diğer Araçlar:** `qrcode.react` (QR Kod Üretimi), `lucide-react` (İkonlar)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📸 3 Boyutlu Ürün Tarama (Tavsiye)
 
-## Learn More
+Yemeklerinizi 3 boyutlu (.glb formatında) modele dönüştürmek için profesyonel ekipmanlara ihtiyacınız yoktur. Tamamen ücretsiz olan aşağıdaki uygulamaları telefonunuza indirerek profesyonel taramalar yapabilirsiniz:
+- **Luma AI:** Akıllı telefon kamerası ile NeRF ve Photogrammetry destekli tarama yapar.
+- **RealityScan (Epic Games):** Kaliteli 3D modeller elde edip `.glb` formatında ücretsiz dışa aktarabilirsiniz.
 
-To learn more about Next.js, take a look at the following resources:
+## 💻 Kurulum ve Çalıştırma
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Bağımlılıkları yükleyin:
+   ```bash
+   cd ar-menu
+   npm install
+   ```
 
-## Deploy on Vercel
+2. Geliştirme sunucusunu başlatın:
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresine giderek sistemi test edebilirsiniz.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Bu proje, restoranlarda müşteri deneyimini bir üst seviyeye taşımak üzere bir MVP (Minimum Viable Product - İlk Çalışan Ürün) olarak tasarlanmıştır.*
