@@ -2,11 +2,16 @@
   "name": "ar-menu",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.17.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/menuUtils.test.mjs"
   },
   "dependencies": {
     "@google/model-viewer": "^4.3.1",
@@ -14,7 +19,8 @@
     "next": "14.2.35",
     "qrcode.react": "^4.2.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "three": "^0.183.0"
   },
   "devDependencies": {
     "@types/node": "^20",
